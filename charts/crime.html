@@ -20,8 +20,8 @@
       var dataset = {
         "data": data,
         "mappings":{
-          "x": {"field":"ZIP_CODE","label":"ZIP Code"},
-          "y": {"field":"TOTAL_STUD_SUM","label":"Total Students"}
+          "x": {"field":"year","label":"Fiscal Year"},
+          "y": {"field":"crimes","label":"Total Crimes"}
         }
       };
       //assign to the chart
@@ -37,7 +37,7 @@
     }
   });
 
-  
+
   chart.tooltip = {
     "title": "{Year} FY",
     "content": "{Performance} affordable rental units created"
