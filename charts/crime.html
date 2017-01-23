@@ -20,8 +20,16 @@
       var dataset = {
         "data": data,
         "mappings":{
-          "x": {"field":"year","label":"Fiscal Year"},
-          "y": {"field":"crimes","label":"Total Crimes"}
+          "time": {
+            "field": "year",
+            "label": "Fiscal Year"
+          },
+          "value": {
+            "field": "crimes",
+            "label": "Total Crimes / 1000"
+          }
+          // "x": {"field":"year","label":"Fiscal Year"},
+          // "y": {"field":"crimes","label":"Total Crimes / 1000"}
         }
       };
       //assign to the chart
