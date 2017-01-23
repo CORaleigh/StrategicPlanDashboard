@@ -14,18 +14,30 @@
 <script>
   var chart = new Cedar({"type": "time"});
 
-  //create the dataset w/ mappings
-  var dataset = {
-    "url":"https://services6.arcgis.com/0p6i4J6xhQas4Unf/arcgis/rest/services/performance/FeatureServer/0",
-    "query": {
-      "where":"Performance_Measure='Number of affordable rental units created - fiscal year '"
-    },
-    "mappings":{
-      "sort": "End_Date DESC",
-      "x": {"field":"Year","label":"Fiscal Year"},
-      "y": {"field":"Performance","label":"Units created"}
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/crime.json', function(err, data){
+    if(!err){
+
+      var dataset = {
+        "data": data,
+        "mappings":{
+          "x": {"field":"ZIP_CODE","label":"ZIP Code"},
+          "y": {"field":"TOTAL_STUD_SUM","label":"Total Students"}
+        }
+      };
+      //assign to the chart
+      chart.dataset = dataset;
+
+      //show the chart
+      chart.show({
+        elementId: "#chart"
+      });
+
+    }else{
+      console.error('Error loading data from file');
     }
-  };
+  });
+
+  
   chart.tooltip = {
     "title": "{Year} FY",
     "content": "{Performance} affordable rental units created"
