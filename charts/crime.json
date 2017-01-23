@@ -1,10 +1,10 @@
 {"features": [
   {"attributes": {
-  	"year": "FY15",
+  	"year": 2015,
   	"crimes": 1428
   }},
   {"attributes": {
-  	"year": "FY16",
+  	"year": 2016,
   	"crimes": 1567
   }}  
 ]
