@@ -24,10 +24,10 @@
           },
           "value": {
             "field": "miles",
-            "label": "Cumulative Miles of Bike Lanes and Paths"
+            "label": "Miles of Bike Lanes and Paths"
           },
            "x": {"field":"year","label":"Year"},
-           "y": {"field":"miles","label":"Cumulative Miles of Bike Lanes and Paths"}
+           "y": {"field":"miles","label":"Miles of Bike Lanes and Paths"}
         }
       };
       //test
@@ -43,7 +43,7 @@
   });
    chart.tooltip = {
      "title": "{year}",
-     "content": "{miles} Miles of Bike Lanes and Paths"
+     "content": "{miles} Cumulative Miles of Bike Lanes and Paths"
    };
    //assign to the chart
    chart.dataset = dataset;
