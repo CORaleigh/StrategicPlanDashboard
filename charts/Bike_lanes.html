@@ -13,7 +13,7 @@
 
 <script>
   var chart = new Cedar({"type": "bar"});
-  var data = Cedar.getJson('NEW JSON URL', function(err, data){
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/Bike_Lanes.json', function(err, data){
     if(!err){
       var dataset = {
         "data": data,
