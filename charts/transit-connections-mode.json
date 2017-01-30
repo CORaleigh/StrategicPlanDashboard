@@ -1,0 +1,12 @@
+{"features": [
+  {"attributes": {
+  	"mode": "GoTriangle",
+  	"connections": 11,
+    "year": "2015"
+  }},
+  {"attributes": {
+    "mode": "GoTriangle",
+    "connections": 14,
+    "year": "2016"
+  }}]
+}
