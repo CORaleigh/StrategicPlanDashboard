@@ -2,21 +2,21 @@
   {"attributes": {
   	"mode": "GoTriangle",
   	"connections": 11,
-    "year": "2015"
+    "year": 1420070400000
   }},
   {"attributes": {
     "mode": "GoTriangle",
     "connections": 14,
-    "year": "2016"
+    "year": 1451606400000
   }},
   {"attributes": {
     "mode": "Greyhound",
     "connections": 27,
-    "year": "2015"
+    "year": 1420070400000
   }},
   {"attributes": {
     "mode": "Greyhound",
     "connections": 27,
-    "year": "2016"
+    "year": 1451606400000
   }}]
 }
