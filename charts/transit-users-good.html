@@ -45,6 +45,16 @@
      "title": "{metric}",
      "content": "{percent} percent good and very good"
    };
+   chart.override = {
+    "marks": [
+      {"properties": 
+        {
+          "hover": {"fill": {"value": "#17a086"}},
+          "update": {"fill": {"value": "#7fcdbb"}}
+        }
+      }
+    ]
+  };
    //assign to the chart
    chart.dataset = dataset;
    //show the chart
