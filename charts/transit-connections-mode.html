@@ -14,21 +14,23 @@
 
 <script>
   var chart = new Cedar({"type": "grouped"});
-  var data = Cedar.getJson('NEW JSON URL', function(err, data){
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-connections-mode.json', function(err, data){
     if(!err){
       var dataset = {
         "data": data,
         "mappings":{
           "grouped": {
-            "field": "metric",
+            "field": "mode",
             "label": ""
           },
           "value": {
-            "field": "percent",
-            "label": ""
+            "field": "connections",
+            "label": "connections"
           },
-           "x": {"field":"percent","label":""},
-           "y": {"field":"metric","label":""}
+          "x": {"field":["mode", "connections"],"label":"test"},
+          "group":{"field":"year","label":"year"}
+           //"x": {"field":"percent","label":""},
+           //"y": {"field":"metric","label":""}
         }
       };
       //test
