@@ -8,5 +8,15 @@
     "mode": "GoTriangle",
     "connections": 14,
     "year": "2016"
+  }},
+  {"attributes": {
+    "mode": "Greyhound",
+    "connections": 27,
+    "year": "2015"
+  }},
+  {"attributes": {
+    "mode": "Greyhound",
+    "connections": 27,
+    "year": "2016"
   }}]
 }
