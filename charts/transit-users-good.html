@@ -15,7 +15,6 @@
   var chart = new Cedar({"type": "bar-horizontal"});
   var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-good.json', function(err, data){
     if(!err){
-
       var dataset = {
         "data": data,
         "mappings":{
@@ -26,9 +25,9 @@
           "value": {
             "field": "percent",
             "label": "percent good and very good"
-          }
-           "x": {"field":"percent","label":"percent good and very good"},
-           "y": {"field":"metric","label":"metric"}
+          },
+           "x": {"field":"metric","label":"metric"},
+           "y": {"field":"percent","label":"Percent good and very good"}
         }
       };
       //test
@@ -42,7 +41,16 @@
       console.error('Error loading data from file');
     }
   });
-  
+   //chart.tooltip = {
+     //"title": "{year}",
+     //"content": "{miles} Cumulative Miles of Bike Lanes and Paths"
+   //};
+   //assign to the chart
+   //chart.dataset = dataset;
+   //show the chart
+   //chart.show({
+     //elementId: "#chart"
+   //});
 </script>
 </body>
 </html>
