@@ -1,0 +1,66 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script type="text/javascript" src="https://vega.github.io/vega/vega.min.js"></script>
+  <script type="text/javascript" src="https://npmcdn.com/arcgis-cedar/dist/cedar.js"></script>
+</head>
+<body>
+
+<div class="row">
+  <div style="width: 400px; height: 300px" id="chart"></div>
+
+</div>
+
+<script>
+  var chart = new Cedar({"type": "bar-horizontal"});
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-good.json', function(err, data){
+    if(!err){
+      var dataset = {
+        "data": data,
+        "mappings":{
+          "bar-horizontal": {
+            "field": "metric",
+            "label": ""
+          },
+          "value": {
+            "field": "percent",
+            "label": "percent good and very good"
+          },
+           "x": {"field":"percent","label":"Percent of responses 'good' and 'very good'"},
+           "y": {"field":"metric","label":""}
+        }
+      };
+      //test
+      //assign to the chart
+      chart.dataset = dataset;
+      //show the chart
+      chart.show({
+        elementId: "#chart"
+      });
+    }else{
+      console.error('Error loading data from file');
+    }
+  });
+   chart.tooltip = {
+     "title": "{metric}",
+     "content": "{percent} percent good and very good"
+   };
+   chart.override = {
+    "marks": [
+      {"properties": 
+        {
+          "hover": {"fill": {"value": "#17581D"}},
+          "update": {"fill": {"value": "#718A73"}}
+        }
+      }
+    ]
+  };
+   //assign to the chart
+   chart.dataset = dataset;
+   //show the chart
+   chart.show({
+     elementId: "#chart"
+   });
+</script>
+</body>
+</html>

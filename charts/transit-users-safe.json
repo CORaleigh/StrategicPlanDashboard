@@ -1,0 +1,10 @@
+{"features": [
+  {"attributes": {
+  	"metric": "Waiting at Bus Stop",
+  	"percent": 77
+  }},
+ {"attributes": {
+  	"metric": "Riding the Bus",
+  	"percent": 84
+  }}]
+}
