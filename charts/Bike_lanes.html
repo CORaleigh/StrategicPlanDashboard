@@ -7,7 +7,7 @@
 <body>
 
 <div class="row">
-  <div style="width: 300px; height: 300px" id="chart"></div>
+  <div style="width: 400px; height: 300px" id="chart"></div>
 
 </div>
 
@@ -45,6 +45,16 @@
      "title": "{year}",
      "content": "{miles} Cumulative Miles of Bike Lanes and Paths"
    };
+      chart.override = {
+    "marks": [
+      {"properties": 
+        {
+          "hover": {"fill": {"value": "#17581D"}},
+          "update": {"fill": {"value": "#718A73"}}
+        }
+      }
+    ]
+  };
    //assign to the chart
    chart.dataset = dataset;
    //show the chart
