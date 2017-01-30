@@ -30,16 +30,6 @@
            "y": {"field":"metric","label":""}
         }
       };
-  var chartS = new Cedar(spec); chartS.show({elementId: "#chart-small"});
-  var chartM = new Cedar(spec); chartM.show({elementId: "#chart-medium"});
-  var chartL = new Cedar(spec); chartL.show({elementId: "#chart-large"});
-
-
-  $(function() {
-    $( "#resizable" ).resizable({
-      resize: function() { chartL.update(); }
-    });
-  });
       //test
       //assign to the chart
       chart.dataset = dataset;
