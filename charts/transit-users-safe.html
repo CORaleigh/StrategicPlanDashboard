@@ -7,7 +7,7 @@
 <body>
 
 <div class="row">
-<h3>My Chart</h3>
+<h3 align="center">Transit Users Rating of GoRaleigh</h3>
   <div style="width: 400px; height: 300px" id="chart"></div>
 
 </div>
@@ -25,10 +25,10 @@
           },
           "value": {
             "field": "percent",
-            "label": "percent safe and very safe"
+            "label": "percent safe or very safe"
           },
            "x": {"field":"metric","label":""},
-           "y": {"field":"percent","label":"Percent of responses 'safe' and 'very safe"}
+           "y": {"field":"percent","label":"Percent of responses 'safe' or 'very safe'"}
         }
       };
       //test
@@ -44,7 +44,7 @@
   });
    chart.tooltip = {
      "title": "{metric}",
-     "content": "{percent} percent safe and very safe"
+     "content": "{percent} percent 'safe' or 'very safe'"
    };
    chart.override = {
     "marks": [
