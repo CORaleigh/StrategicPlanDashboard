@@ -12,22 +12,22 @@
 </div>
 
 <script>
-  var chart = new Cedar({"type": "bar-horizontal"});
-  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-good.json', function(err, data){
+  var chart = new Cedar({"type": "bar"});
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-safe.json', function(err, data){
     if(!err){
       var dataset = {
         "data": data,
         "mappings":{
-          "bar-horizontal": {
+          "bar": {
             "field": "metric",
             "label": ""
           },
           "value": {
             "field": "percent",
-            "label": "percent good and very good"
+            "label": "percent safe and very safe"
           },
-           "x": {"field":"percent","label":"Percent of responses 'good' and 'very good'"},
-           "y": {"field":"metric","label":""}
+           "x": {"field":"metric","label":""},
+           "y": {"field":"percent","label":"Percent of responses 'safe' and 'very safe"}
         }
       };
       //test
@@ -43,7 +43,7 @@
   });
    chart.tooltip = {
      "title": "{metric}",
-     "content": "{percent} percent good and very good"
+     "content": "{percent} percent safe and very safe"
    };
    chart.override = {
     "marks": [
