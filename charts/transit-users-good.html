@@ -1,4 +1,4 @@
-html>
+<html>
 <head>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
   <script type="text/javascript" src="https://vega.github.io/vega/vega.min.js"></script>
@@ -13,14 +13,22 @@ html>
 
 <script>
   var chart = new Cedar({"type": "bar-horizontal"});
-  var data = Cedar.getJson('NEW JSON URL', function(err, data){
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-good.json', function(err, data){
     if(!err){
 
       var dataset = {
         "data": data,
         "mappings":{
-           "x": {"field":"metric","label":"metric"},
-           "y": {"field":"percent","label":"Percent "good" and "very good""}
+          "bar-horizontal": {
+            "field": "metric",
+            "label": "metric"
+          },
+          "value": {
+            "field": "percent",
+            "label": "percent good and very good"
+          }
+           "x": {"field":"percent","label":"percent good and very good"},
+           "y": {"field":"metric","label":"metric"}
         }
       };
       //test
