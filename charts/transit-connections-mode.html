@@ -31,7 +31,7 @@
             "field": "year",
             "label": ""
           },
-          "x": {"field":["attributes.year2015","attributes.year2016"],"label":"year"},
+          "x": {"field":["attributes.year2015","attributes.year2016"],"label":"Year"},
           //"y": {"field":["connections"],"label":"connections"},
           "group":{"field":"mode","label":"mode"}
            //"x": {"field":"percent","label":""},
@@ -51,7 +51,7 @@
   });
    chart.tooltip = {
      "title": "{mode}",
-     "content": "{year2015} Connections | {Year2016} Connections"
+     "content": "{year2015} Connections | {year2016} Connections"
    };
    chart.override = {
     "marks": [
