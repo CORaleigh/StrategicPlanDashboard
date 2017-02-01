@@ -1,0 +1,12 @@
+{"features": [
+  {"attributes": {
+  	"year": "FY15",
+    "PersonCrimes": 1428,
+    "PropertyCrimes": 3600
+  }},
+  {"attributes": {
+    "year": "FY16",
+    "PersonCrimes": 1567,
+    "PropertyCrimes": 4614
+  }}]
+}
