@@ -1,0 +1,38 @@
+<p>The population of DC <span id="pop-dc" class="cedar-spark"></span> has increased over the years, while Baltimore <span id="pop-bm" class="cedar-spark"></span> has been declining.</p>
+
+<style>
+#pop-dc .mark-line path { stroke: rgb(0,200,0) !important ;}
+</style>
+
+<script type="text/javascript">
+  var data = [
+    {"attributes": {"date": "2000", "dc": 572046, "baltimore": 648654}},
+    {"attributes": {"date": "2010", "dc": 601767, "baltimore": 621317}},
+    {"attributes": {"date": "2013", "dc": 649111, "baltimore": 623404}},
+    {"attributes": {"date": "2014", "dc": 658893, "baltimore": 622793}}
+  ];
+
+  var chartdc = new Cedar({
+    "type": "sparkline",
+    "dataset":{
+      "data":data,
+      "mappings":{
+        "x": {"field":"date","label":"Date"},
+        "y": {"field":"dc","label":"dc"}
+      }
+    }
+  });
+  chartdc.show({elementId: "#pop-dc", autolabels: false, height: 10, width: 20, renderer: "svg" });
+
+  var chartbm = new Cedar({
+    "type": "sparkline",
+    "dataset":{
+      "data":data,
+      "mappings":{
+        "x": {"field":"date","label":"Date"},
+        "y": {"field":"baltimore","label":"population"}
+      }
+    }
+  });
+  chartbm.show({elementId: "#pop-bm", autolabels: false, height: 10, width: 20, renderer: "svg" });
+</script>
