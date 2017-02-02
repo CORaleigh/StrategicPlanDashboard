@@ -1,0 +1,66 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script type="text/javascript" src="https://vega.github.io/vega/vega.min.js"></script>
+  <script type="text/javascript" src="https://npmcdn.com/arcgis-cedar/dist/cedar.js"></script>
+</head>
+<body>
+
+<div class="row">
+  <div style="width: 400px; height: 300px" id="chart"></div>
+
+</div>
+
+<script>
+  var chart = new Cedar({"type": "bar"});
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/life-expectancy.json', function(err, data){
+    if(!err){
+      var dataset = {
+        "data": data,
+        "mappings":{
+          "bar": {
+            "field": "zip",
+            "label": "ZIP"
+          },
+          "value": {
+            "field": "years",
+            "label": "Life Expectancy"
+          },
+           "x": {"field":"zip","label":"ZIP"},
+           "y": {"field":"years","label":"Life Expectancy"}
+        }
+      };
+      //test
+      //assign to the chart
+      chart.dataset = dataset;
+      //show the chart
+      chart.show({
+        elementId: "#chart"
+      });
+    }else{
+      console.error('Error loading data from file');
+    }
+  });
+   chart.tooltip = {
+     "title": "{zip}",
+     "content": "{years} Average Life Expectancy"
+   };
+      chart.override = {
+    "marks": [
+      {"properties": 
+        {
+          "hover": {"fill": {"value": "#17581D"}},
+          "update": {"fill": {"value": "#718A73"}}
+        }
+      }
+    ]
+  };
+   //assign to the chart
+   chart.dataset = dataset;
+   //show the chart
+   chart.show({
+     elementId: "#chart"
+   });
+</script>
+</body>
+</html>
