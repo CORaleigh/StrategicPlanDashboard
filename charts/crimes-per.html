@@ -16,44 +16,19 @@
   var chart = new Cedar({"type": "grouped"});
   var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/crimes-per.json', function(err, data){
     if(!err){
-      var dataset = {
-        "data": data,
-        "mappings":{
-          "grouped": {
-            "field": "year",
-            "label": ""
-          },
-          "value": {
-            "field": "PersonCrimes",
-            "label": ""
-          },
-           "value": {
-            "field": "PropertyCrimes",
-            "label": ""
-          },
-          "x": {"field":["attributes.PersonCrimes","attributes.PropertyCrimes"],"label":"Crimes"},
-          //"y": {"field":["connections"],"label":"connections"},
-          "group":{"field":"year","label":"year"}
-           //"x": {"field":"percent","label":""},
-           //"y": {"field":"metric","label":""}
-        }
-      };
-      //test
-      //assign to the chart
-      chart.dataset = dataset;
-      //show the chart
-      chart.show({
-        elementId: "#chart"
-      });
-    }else{
-      console.error('Error loading data from file');
+  var dataset = {
+    "data": data,
+    "mappings":{
+      "x": {"field":["attributes.PersonCrimes","attributes.PropertyCrimes"],"label":"Crimes"},
+      //"y": {"field":["connections"],"label":"connections"},
+      "group":{"field":"year","label":"year"}
     }
-  });
-   chart.tooltip = {
-     "title": "{year}",
-     "content": "{PersonCrimes} Person Crimes in {year} | {PropertyCrimes} PropertyCrimes in {year}"
+  };
+  chart.tooltip = {
+    "title": "{year}",
+    "content": "{PersonCrimes} Person Crimes in {year} | {PropertyCrimes} PropertyCrimes in {year}"
    };
-   chart.override = {
+  chart.override = {
     "axes":[
       {"type":"x","title":"Fiscal Year"},
       {"type":"y","title":"Crimes per 100,000 People"}
@@ -67,12 +42,16 @@
       //}
     //]
   };
-   //assign to the chart
-   chart.dataset = dataset;
-   //show the chart
-   chart.show({
-     elementId: "#chart"
-   });
+  //assign to the chart
+  chart.dataset = dataset;
+  //show the chart
+  chart.show({
+      elementId: "#chart"
+  });
+    }else{
+      console.error('Error loading data from file');
+    }
+  });
 </script>
 </body>
 </html>
