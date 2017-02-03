@@ -53,7 +53,11 @@
      "title": "{year}",
      "content": "{PersonCrimes} Person Crimes in {year} | {PropertyCrimes} PropertyCrimes in {year}"
    };
-   //chart.override = {
+   chart.override = {
+    "axes":[
+      {"type":"x","title":"Fiscal Year"},
+      {"type":"y","title":"Crimes per 100,000 People"}
+    ]
     //"marks": [
       //{"properties": 
         //{
@@ -62,7 +66,7 @@
         //}
       //}
     //]
-  //};
+  };
    //assign to the chart
    chart.dataset = dataset;
    //show the chart
