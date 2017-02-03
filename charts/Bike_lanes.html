@@ -16,7 +16,6 @@
   var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/BikeLanes.json', function(err, data){
     if(!err){
       var dataset = {
-        "data": data,
         "mappings":{
            "x": {"field":"year","label":"Year"},
            "y": {"field":"miles","label":"Miles of Bike Lanes and Paths"}
