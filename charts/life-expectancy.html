@@ -17,9 +17,7 @@
     if(!err){
       var dataset = {
         "data": data,
-        "query": {
-          "orderByFields": "years DESC"
-        },
+        "query": {"orderByFields": "years DESC"},
         "mappings":{
           "bar": {
             "field": "zip",
@@ -29,9 +27,9 @@
             "field": "years",
             "label": "Life Expectancy"
           },
-          "sort": "years",
-           "x": {"field":"zip","label":"ZIP"},
-           "y": {"field":"years","label":"Life Expectancy"}
+          //"sort": "years",
+          "x": {"field":"zip","label":"ZIP"},
+          "y": {"field":"years","label":"Life Expectancy"}
         }
       }
       //test
