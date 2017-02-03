@@ -28,15 +28,15 @@
       };
       //test
       //assign to the chart
-      chart.dataset = dataset;
+      //chart.dataset = dataset;
       //show the chart
-      chart.show({
-        elementId: "#chart"
-      });
-    }else{
-      console.error('Error loading data from file');
-    }
-  });
+      //chart.show({
+        //elementId: "#chart"
+      //});
+    //}else{
+      //console.error('Error loading data from file');
+    //}
+  //});
    chart.tooltip = {
      "title": "{year}",
      "content": "{RentBurdened} Rent Burdened in {year} | {OwnerBurdened} % Owner Burdened in {year}"
@@ -55,12 +55,16 @@
       //}
     //]
   };
-   //assign to the chart
-   chart.dataset = dataset;
-   //show the chart
-   chart.show({
-     elementId: "#chart"
-   });
+      //assign to the chart
+  chart.dataset = dataset;
+      //show the chart
+  chart.show({
+    elementId: "#chart"
+  });
+    }else{
+      console.error('Error loading data from file');
+    }
+  });
 </script>
 </body>
 </html>
