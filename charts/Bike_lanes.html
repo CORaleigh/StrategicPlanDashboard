@@ -22,22 +22,11 @@
            "y": {"field":"miles","label":"Miles of Bike Lanes and Paths"}
         }
       };
-      //test
-      //assign to the chart
-      //chart.dataset = dataset;
-      //show the chart
-      //chart.show({
-        //elementId: "#chart"
-      //});
-    //}else{
-      //console.error('Error loading data from file');
-    //}
-  //});
    chart.tooltip = {
      "title": "{year}",
      "content": "{miles} Cumulative Miles of Bike Lanes and Paths"
    };
-      chart.override = {
+   chart.override = {
     "marks": [
       {"properties": 
         {
@@ -47,12 +36,7 @@
       }
     ]
   };
-   //assign to the chart
-   //chart.dataset = dataset;
-   //show the chart
-   //chart.show({
-     //elementId: "#chart"
-   //});
+      //assign to the chart
     chart.dataset = dataset;
       //show the chart
       chart.show({
