@@ -15,18 +15,18 @@
   var chart = new Cedar({"type": "bar"});
   var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/BikeLanes.json', function(err, data){
     if(!err){
-      var dataset = {
-        "data": data,
-        "mappings":{
-           "x": {"field":"year","label":"Year"},
-           "y": {"field":"miles","label":"Miles of Bike Lanes and Paths"}
-        }
-      };
-   chart.tooltip = {
+  var dataset = {
+    "data": data,
+    "mappings":{
+       "x": {"field":"year","label":"Year"},
+       "y": {"field":"miles","label":"Miles of Bike Lanes and Paths"}
+    }
+  };
+  chart.tooltip = {
      "title": "{year}",
      "content": "{miles} Cumulative Miles of Bike Lanes and Paths"
-   };
-   chart.override = {
+  };
+  chart.override = {
     "marks": [
       {"properties": 
         {
@@ -37,11 +37,11 @@
     ]
   };
       //assign to the chart
-    chart.dataset = dataset;
+  chart.dataset = dataset;
       //show the chart
-      chart.show({
-        elementId: "#chart"
-      });
+  chart.show({
+    elementId: "#chart"
+  });
     }else{
       console.error('Error loading data from file');
     }
