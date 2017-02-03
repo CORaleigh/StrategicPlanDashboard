@@ -16,27 +16,14 @@
   var chart = new Cedar({"type": "grouped"});
   var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/cost-burden.json', function(err, data){
     if(!err){
-      var dataset = {
-        "data": data,
-        "mappings":{
-          "x": {"field":["attributes.RentBurdened","attributes.OwnerBurdened"],"label":"Cost Burdened"},
-          //"y": {"field":[""],"label":""},
-          "group":{"field":"year","label":"year"}
-           //"x": {"field":"percent","label":""},
-           //"y": {"field":"metric","label":""}
-        }
-      };
-      //test
-      //assign to the chart
-      //chart.dataset = dataset;
-      //show the chart
-      //chart.show({
-        //elementId: "#chart"
-      //});
-    //}else{
-      //console.error('Error loading data from file');
-    //}
-  //});
+  var dataset = {
+    "data": data,
+    "mappings":{
+      "x": {"field":["attributes.RentBurdened","attributes.OwnerBurdened"],"label":"Cost Burdened"},
+      //"y": {"field":[""],"label":""},
+      "group":{"field":"year","label":"year"}
+    }
+  };
    chart.tooltip = {
      "title": "{year}",
      "content": "{RentBurdened} Rent Burdened in {year} | {OwnerBurdened} % Owner Burdened in {year}"
