@@ -32,7 +32,7 @@
             "label": ""
           },
           "x": {"field":["attributes.RentBurdened","attributes.OwnerBurdened"],"label":"Cost Burdened"},
-          //"y": {"field":["connections"],"label":"connections"},
+          //"y": {"field":[""],"label":""},
           "group":{"field":"year","label":"year"}
            //"x": {"field":"percent","label":""},
            //"y": {"field":"metric","label":""}
@@ -53,9 +53,15 @@
      "title": "{year}",
      "content": "{RentBurdened} Rent Burdened in {year} | {OwnerBurdened} % Owner Burdened in {year}"
    };
-   //chart.override = {
+   chart.override = {
+    "axes":[
+      {
+          "type":"x",
+          "scale":"x",
+          "title":"Year"
+      }]
     //"marks": [
-      //{"properties": 
+        //{"properties": 
         //{
           //"hover": {"fill": {"value": "#17581D"}},
           //"update": {"fill": {"value": "#718A73"}}
