@@ -23,7 +23,21 @@
           "y": {"field":"years","label":"Life Expectancy"}
         }
       }
-      //test
+  chart.tooltip = {
+    "title": "{zip}",
+    "content": "{years} Average Life Expectancy"
+  };
+  chart.override = {
+    "marks": [
+     {"properties": 
+      {
+        "hover": {"fill": {"value": "#17581D"}},
+        "update": {"fill": {"value": "#718A73"}}
+        }
+      }
+    ]
+  };
+         //test
       //assign to the chart
       chart.dataset = dataset;
       //show the chart
@@ -34,26 +48,6 @@
       console.error('Error loading data from file');
     }
   });
-   chart.tooltip = {
-     "title": "{zip}",
-     "content": "{years} Average Life Expectancy"
-   };
-      chart.override = {
-    "marks": [
-      {"properties": 
-        {
-          "hover": {"fill": {"value": "#17581D"}},
-          "update": {"fill": {"value": "#718A73"}}
-        }
-      }
-    ]
-  };
-   //assign to the chart
-   chart.dataset = dataset;
-   //show the chart
-   chart.show({
-     elementId: "#chart"
-   });
 </script>
 </body>
 </html>
