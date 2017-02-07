@@ -1,0 +1,47 @@
+{"features": [
+  {"attributes": {
+  	"question": "Overall quality of parks and recreation",
+    "National": 63,
+    "Raleigh": 85
+  }},
+  {"attributes": {
+    "question": "Quality of fire services",
+    "National": 81,
+    "Raleigh": 91
+    }},
+  {"attributes": {
+    "question": "Quality of police services",
+    "National": 59,
+    "Raleigh": 79
+    }},
+  {"attributes": {
+    "question": "Response time for police services",
+    "National": 54,
+    "Raleigh": 69
+    }},
+  {"attributes": {
+    "question": "Availability of affordable housing",
+    "National": 32,
+    "Raleigh": null
+    }},
+  {"attributes": {
+    "question": "Overall cleanliness of Raleigh",
+    "National": 54,
+    "Raleigh": 70
+    }},
+  {"attributes": {
+    "question": "Raleigh as a place to live",
+    "National": 71,
+    "Raleigh": 91
+    }},
+  {"attributes": {
+    "question": "Overall quality of life in Raleigh",
+    "National": 63,
+    "Raleigh": 88
+    }},
+  {"attributes": {
+    "question": "2014",
+    "National": 53.1,
+    "Raleigh": 23.8
+  }}]
+}
