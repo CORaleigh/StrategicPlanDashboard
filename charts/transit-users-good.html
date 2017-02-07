@@ -16,37 +16,18 @@
   var chart = new Cedar({"type": "bar-horizontal"});
   var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-good.json', function(err, data){
     if(!err){
-      var dataset = {
-        "data": data,
-        "mappings":{
-          "bar-horizontal": {
-            "field": "metric",
-            "label": ""
-          },
-          "value": {
-            "field": "percent",
-            "label": "percent good or very good"
-          },
-           "x": {"field":"percent","label":"Percent of responses 'good' or 'very good'"},
-           "y": {"field":"metric","label":""}
-        }
-      };
-      //test
-      //assign to the chart
-      chart.dataset = dataset;
-      //show the chart
-      chart.show({
-        elementId: "#chart"
-      });
-    }else{
-      console.error('Error loading data from file');
+  var dataset = {
+    "data": data,
+    "mappings":{
+      "x": {"field":"percent","label":"Percent of responses 'good' or 'very good'"},
+      "y": {"field":"metric","label":""}
     }
-  });
-   chart.tooltip = {
-     "title": "{metric}",
-     "content": "{percent} percent of responses 'good' or 'very good'"
-   };
-   chart.override = {
+  };
+  chart.tooltip = {
+    "title": "{metric}",
+    "content": "{percent} percent of responses 'good' or 'very good'"
+  };
+  chart.override = {
     "marks": [
       {"properties": 
         {
@@ -56,12 +37,16 @@
       }
     ]
   };
-   //assign to the chart
-   chart.dataset = dataset;
-   //show the chart
-   chart.show({
-     elementId: "#chart"
-   });
+  //assign to the chart
+  chart.dataset = dataset;
+  //show the chart
+  chart.show({
+    elementId: "#chart"
+  });
+    }else{
+      console.error('Error loading data from file');
+    }
+  });
 </script>
 </body>
 </html>
