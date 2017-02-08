@@ -1,9 +1,5 @@
 {"features": [
   {"attributes": {
-  	"year": "Pre-2010",
-  	"miles": 4.78
-  }},
-  {"attributes": {
   	"year": "2010",
   	"miles": 6.28
   }},
