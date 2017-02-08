@@ -23,17 +23,6 @@
            "y": {"field":"units","label":"Rental Units"}
         }
       };
-      //test
-      //assign to the chart
-      chart.dataset = dataset;
-      //show the chart
-      chart.show({
-        elementId: "#chart"
-      });
-    }else{
-      console.error('Error loading data from file');
-    }
-  });
    chart.tooltip = {
      "title": "{year}",
      "content": "{units} Affordable Rental Units Created in {year}"
@@ -48,12 +37,16 @@
       }
     ]
   };
-   //assign to the chart
-   chart.dataset = dataset;
-   //show the chart
-   chart.show({
-     elementId: "#chart"
-   });
+  //assign to the chart
+  chart.dataset = dataset;
+  //show the chart
+  chart.show({
+    elementId: "#chart"
+  });
+    }else{
+      console.error('Error loading data from file');
+    }
+  });
 </script>
 </body>
 </html>
