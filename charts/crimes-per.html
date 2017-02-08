@@ -48,6 +48,11 @@
   chart.show({
       elementId: "#chart"
   });
+  $(function() {
+    $( "#resizable" ).resizable({
+      resize: function() { chart.update(); }
+    });
+  });
     }else{
       console.error('Error loading data from file');
     }
