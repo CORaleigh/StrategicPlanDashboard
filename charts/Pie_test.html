@@ -7,7 +7,7 @@
 <body>
 
 <div class="row">
-<h3 align="center"; style="font-family:Helvetica">Crimes per 100,000 People</h3>
+<h3 align="center"; style="font-family:Helvetica">Permits</h3>
   <div style="width: 500px; height: 400px" id="chart"></div>
 
 </div>
@@ -17,11 +17,11 @@
 
   // build a SQL case when expression that
   // converts month numbers to abbreviations
-  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var status = ["C", "V"];
   var groupByExpression = "CASE ";
-  for (var i = 1, len = months.length; i <= len; i++) {
-    var month = months[i - 1];
-    groupByExpression = groupByExpression + "WHEN Month = " + i + " THEN '" + month + "'";
+  for (var i = 1, len = status.length; i <= len; i++) {
+    var status = status[i - 1];
+    groupByExpression = groupByExpression + "WHEN status = " + i + " THEN '" + status + "'";
   }
   groupByExpression = groupByExpression + " END";
 
@@ -29,7 +29,7 @@
     {
       "url":"http://maps.wakegov.com/arcgis/rest/services/Inspections/Permits/MapServer/0",
       "query": {
-        "orderByFields": "USECODEDESCRIPTION_count DESC",
+        "orderByFields": "STATUSCURRENT_count DESC",
         // because we're using an expression here
         // this will be named EXPR_1 in the JSON response's attributes
         "groupByFieldsForStatistics": groupByExpression,
@@ -38,16 +38,16 @@
           // when counting records (not summing values)
           // it's best to use the id field because
           // it is guaranteed to have a value for every record
-          "onStatisticField": "USECODEDESCRIPTION",
-          "outStatisticFieldName": "USECODEDESCRIPTION_count"
+          "onStatisticField": "STATUSCURRENT",
+          "outStatisticFieldName": "STATUSCURRENT_count"
         }]
       }
     }
   ];
   var series = [
     {
-      "category": {"field":"EXPR_1","label":"Use Code Description"},
-      "value": { "field":"USECODEDESCRIPTION_count","label":"Number of Permits by Use Code" },
+      "category": {"field":"EXPR_1","label":"Current Status"},
+      "value": { "field":"STATUSCURRENT_count","label":"Number of Permits Status" },
       "radius": 270
     }
   ];
@@ -58,7 +58,7 @@
   chart.tooltip = {
     // this is the month abbreviation returned from the expresssion above
     "title": "{EXPR_1}",
-    "content": "{USECODEDESCRIPTION_count} Permits"
+    "content": "{STATUSCURRENT_count} Permits"
   }
   chart.show({
     elementId: "#chart",
