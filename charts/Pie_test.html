@@ -15,16 +15,6 @@
 <script>
   var chart = new Cedar({"type":"pie"});
 
-  // build a SQL case when expression that
-  // converts month numbers to abbreviations
-  var status = ["C", "V"];
-  var groupByExpression = "CASE ";
-  for (var i = 1, len = status.length; i <= len; i++) {
-    var status = status[i - 1];
-    groupByExpression = groupByExpression + "WHEN status = " + i + " THEN '" + status + "'";
-  }
-  groupByExpression = groupByExpression + " END";
-
   var datasets = [
     {
       "url":"http://maps.wakegov.com/arcgis/rest/services/Inspections/Permits/MapServer/0",
