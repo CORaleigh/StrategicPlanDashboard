@@ -1,14 +1,18 @@
 {"features": [
   {"attributes": {
-  	"metric": "Variety",
-  	"percent": 82
+  	"metric": "2014",
+  	"percent": 1.28
   }},
  {"attributes": {
-  	"metric": "Cost",
-  	"percent": 65
+  	"metric": "2013",
+  	"percent": 1.27
   }},
  {"attributes": {
-  	"metric": "Availability",
-  	"percent": 80
+  	"metric": "2012",
+  	"percent": 1.34
+  }},
+   {"attributes": {
+    "metric": "2011",
+    "percent": 1.37
   }}]
 }
