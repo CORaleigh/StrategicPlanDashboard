@@ -1,0 +1,52 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.1/vega.min.js"></script>
+  <script type="text/javascript" src="https://npmcdn.com/arcgis-cedar/dist/cedar.js"></script>
+</head>
+<body>
+
+<div class="row">
+<h3 align="center"; style="font-family:Helvetica">Transit Users Rating of GoRaleigh</h3>
+  <div style="width: 450px; height: 300px" id="chart"></div>
+
+</div>
+
+<script>
+  var chart = new Cedar({"type": "bar-horizontal"});
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/ratings-arts-programs.json', function(err, data){
+    if(!err){
+  var dataset = {
+    "data": data,
+    "mappings":{
+      "x": {"field":"percent","label":"Percent of responses 'good' or 'very good'"},
+      "y": {"field":"metric","label":""}
+    }
+  };
+  chart.tooltip = {
+    "title": "{metric}",
+    "content": "{percent} percent of responses 'good' or 'very good'"
+  };
+  chart.override = {
+    "marks": [
+      {"properties": 
+        {
+          "hover": {"fill": {"value": "#17581D"}},
+          "update": {"fill": {"value": "#718A73"}}
+        }
+      }
+    ]
+  };
+  //assign to the chart
+  chart.dataset = dataset;
+  //show the chart
+  chart.show({
+    elementId: "#chart"
+  });
+    }else{
+      console.error('Error loading data from file');
+    }
+  });
+</script>
+</body>
+</html>
