@@ -1,0 +1,14 @@
+{"features": [
+  {"attributes": {
+  	"metric": "Variety",
+  	"percent": 82
+  }},
+ {"attributes": {
+  	"metric": "Cost",
+  	"percent": 65
+  }},
+ {"attributes": {
+  	"metric": "Availability",
+  	"percent": 80
+  }}]
+}
