@@ -19,13 +19,13 @@
   var dataset = {
     "data": data,
     "mappings":{
-      "x": {"field":["attributes.Raleigh","attributes.NC"],"label":"Year"},
+      "x": {"field":["attributes.Raleigh","attributes.NC"],"label":"Legend"},
       //"y": {"field":["connections"],"label":"connections"},
       "group":{"field":"year","label":"year"}
     }
   };
   chart.tooltip = {
-    "title": "{year}",
+    "title": "{Population }",
     "content": "{Raleigh} percent in {year} | {NC} percent in {year}"
   };
   chart.override = {
