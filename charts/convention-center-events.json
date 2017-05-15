@@ -1,0 +1,18 @@
+{"features": [
+  {"attributes": {
+  	"year": "FY13",
+  	"attendance": 265
+  }},
+  {"attributes": {
+  	"year": "FY14",
+  	"attendance": 219
+  }},
+  {"attributes": {
+  	"year": "FY15",
+  	"attendance": 238
+  }},
+  {"attributes": {
+  	"year": "FY16",
+  	"attendance": 270
+  }}]
+}
