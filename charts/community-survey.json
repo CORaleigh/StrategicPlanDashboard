@@ -1,42 +1,42 @@
 {"features": [
   {"attributes": {
   	"question": "Overall Traffic Flow",
-    "National Average": 30,
+    "Average(National)": 30,
     "Raleigh": 28
   }},
   {"attributes": {
     "question": "Overall Image of Raleigh",
-    "National Average": 55,
+    "Average(National)": 55,
     "Raleigh": 90
     }},
   {"attributes": {
     "question": "Quality of Services Provided",
-    "National Average": 45,
+    "Average(National)": 45,
     "Raleigh": 68
     }},
   {"attributes": {
     "question": "How Well City is Managing Growth",
-    "National Average": 33,
+    "Average(National)": 33,
     "Raleigh": 40
     }},
   {"attributes": {
     "question": "Overall Quality of Life",
-    "National Average": 63,
+    "Average(National)": 63,
     "Raleigh": 88
     }},
   {"attributes": {
     "question": "Enforcement of Junk and Debris Cleanup",
-    "National Average": 42,
+    "Average(National)": 42,
     "Raleigh": 36
     }},
   {"attributes": {
     "question": "Direction City of Raleigh is Taking",
-    "National Average": 59,
+    "Average(National)": 59,
     "Raleigh": 69
     }},
   {"attributes": {
     "question": "Raleigh as a Place to Live",
-    "National Average": 71,
+    "Average(National)": 71,
     "Raleigh": 91
   }}]
 }

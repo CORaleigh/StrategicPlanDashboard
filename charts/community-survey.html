@@ -19,14 +19,14 @@
   var dataset = {
     "data": data,
     "mappings":{
-      "x": {"field":["attributes.Raleigh","attributes.National Average"],"label":"Legend"},
+      "x": {"field":["attributes.Raleigh","attributes.Average(National)"],"label":"Legend"},
       //"y": {"field":["connections"],"label":"connections"},
       "group":{"field":"question","label":"question"}
     }
   };
   chart.tooltip = {
     "title": "Percent of responses 'good' or 'very good'",
-    "content": "{Raleigh} % in Raleigh | {National Average} % National Average"
+    "content": "{Raleigh} % in Raleigh | {Average(National)} % National Average"
   };
   chart.override = {
     "marks": [
