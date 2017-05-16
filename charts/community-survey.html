@@ -7,7 +7,7 @@
 <body>
 
 <div class="row">
-<h3 align="center">Community Survey</h3>
+<h3 align="left"; style="font-family:Helvetica">Community Survey Ratings</h3>
   <div style="width: 450px; height: 400px" id="chart"></div>
 
 </div>
@@ -19,30 +19,26 @@
   var dataset = {
     "data": data,
     "mappings":{
-      "x": {"field":["attributes.National","attributes.Raleigh"],"label":"Response Region"},
-      //"y": {"field":[""],"label":""},
-      "group":{"field":"question","label":"Survey Question"}
+      "x": {"field":["attributes.Raleigh","attributes.National"],"label":"Legend"},
+      //"y": {"field":["connections"],"label":"connections"},
+      "group":{"field":"question","label":"question"}
     }
   };
-   chart.tooltip = {
-     "title": "{year}",
-     "content": "{National} % 'good' or 'excellent' Nationally| {Raleigh} % 'good' or 'excellent' in Raleigh"
-   };
-   chart.override = {
-    "axes":[
-      {"type":"x","title":"Survey Questions","titleOffset":200},
-      {"type":"y","title":"Percent Responding 'good' or 'excellent'"},
-      //{"titleOffset":200}
-    ]
-    //"marks": [
-        //{"properties": 
-        //{
-          //"hover": {"fill": {"value": "#17581D"}},
-          //"update": {"fill": {"value": "#718A73"}}
-        //}
-      //}
-    //]
+  chart.tooltip = {
+    "title": "Population Below Poverty Level {year}",
+    "content": "{Raleigh} % in Raleigh | {NC} % in NC"
   };
+  chart.override = {
+    "marks": [
+      {"properties": 
+        {
+          "hover": {"fill": {"value": "#17581D"}},
+          "update": {"fill": {"value": "#718A73"}}
+        }
+      }
+    ]
+  };
+  //test
   //assign to the chart
   chart.dataset = dataset;
   //show the chart

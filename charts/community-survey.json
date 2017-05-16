@@ -1,42 +1,42 @@
 {"features": [
   {"attributes": {
-  	"question": "Overall quality of parks and recreation",
-    "National": 63,
-    "Raleigh": 85
+  	"question": "Overall Traffic Flow",
+    "National": 30,
+    "Raleigh": 28
   }},
   {"attributes": {
-    "question": "Quality of fire services",
-    "National": 81,
-    "Raleigh": 91
+    "question": "Overall Image of Raleigh",
+    "National": 55,
+    "Raleigh": 90
     }},
   {"attributes": {
-    "question": "Quality of police services",
+    "question": "Quality of Services Provided",
+    "National": 45,
+    "Raleigh": 68
+    }},
+  {"attributes": {
+    "question": "How Well City is Managing Growth",
+    "National": 33,
+    "Raleigh": 40
+    }},
+  {"attributes": {
+    "question": "Overall Quality of Life",
+    "National": 63,
+    "Raleigh": 88
+    }},
+  {"attributes": {
+    "question": "Enforcement of Junk and Debris Cleanup",
+    "National": 42,
+    "Raleigh": 36
+    }},
+  {"attributes": {
+    "question": "Direction City of Raleigh is Taking",
     "National": 59,
-    "Raleigh": 79
-    }},
-  {"attributes": {
-    "question": "Response time for police services",
-    "National": 54,
     "Raleigh": 69
     }},
   {"attributes": {
-    "question": "Availability of affordable housing",
-    "National": 32,
-    "Raleigh": null
-    }},
-  {"attributes": {
-    "question": "Overall cleanliness of Raleigh",
-    "National": 54,
-    "Raleigh": 70
-    }},
-  {"attributes": {
-    "question": "Raleigh as a place to live",
+    "question": "Raleigh as a Place to Live",
     "National": 71,
     "Raleigh": 91
-    }},
-  {"attributes": {
-    "question": "Overall quality of life in Raleigh",
-    "National": 63,
-    "Raleigh": 88
   }}]
 }
