@@ -1,0 +1,56 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.1/vega.min.js"></script>
+  <script type="text/javascript" src="https://npmcdn.com/arcgis-cedar/dist/cedar.js"></script>
+</head>
+<body>
+
+<br/>
+
+<div class="row">
+<h3 align="left"; style="font-family:Helvetica">Customer Service Ratings</h3>
+  <div style="width: 550px; height: 400px" id="chart"></div>
+
+</div>
+
+<script>
+  var chart = new Cedar({"type": "grouped"});
+  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/customer-service-ratings.json', function(err, data){
+    if(!err){
+  var dataset = {
+    "data": data,
+    "mappings":{
+      "x": {"field":["attributes.Raleigh","attributes.National"],"label":"Legend"},
+      //"y": {"field":["connections"],"label":"connections"},
+      "group":{"field":"question","label":"question"}
+    }
+  };
+  chart.tooltip = {
+    "title": "Percent of responses 'good' or 'very good'",
+    "content": "{Raleigh}% in Raleigh | {National}% National Average"
+  };
+  chart.override = {
+    "marks": [
+      {"properties": 
+        {
+          "hover": {"fill": {"value": "#17581D"}},
+          "update": {"fill": {"value": "#718A73"}}
+        }
+      }
+    ]
+  };
+  //test
+  //assign to the chart
+  chart.dataset = dataset;
+  //show the chart
+  chart.show({
+    elementId: "#chart"
+  });
+    }else{
+      console.error('Error loading data from file');
+    }
+  });
+</script>
+</body>
+</html>
