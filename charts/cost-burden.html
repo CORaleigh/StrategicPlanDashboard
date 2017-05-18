@@ -152,7 +152,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/cost-burdened.
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +"%"+ d.key);
+        divTooltip.html(d.value +"% "+ d.key);
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
