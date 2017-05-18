@@ -101,7 +101,8 @@ var svg = d3.select("svg"),
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 var x0 = d3.scaleBand()
     .rangeRound([0, width])
-    .paddingInner(0.1);
+    .paddingInner(0.1)
+    .paddingOuter(0.1);
 var x1 = d3.scaleBand()
     .padding(0.05);
 var y = d3.scaleLinear()
