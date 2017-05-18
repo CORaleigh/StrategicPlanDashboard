@@ -1,22 +1,22 @@
-{"features": [
-  {"attributes": {
+[
+  {
   	"year": "2012",
     "RentBurdened": 48.7,
     "OwnerBurdened": 26.4
-  }},
-  {"attributes": {
+  },
+  {
     "year": "2013",
     "RentBurdened": 46.9,
     "OwnerBurdened": 26.0
-    }},
-  {"attributes": {
+    },
+  {
     "year": "2014",
     "RentBurdened": 53.1,
     "OwnerBurdened": 23.8
-    }},
-  {"attributes": {
+    },
+  {
     "year": "2015",
     "RentBurdened": 48.7,
     "OwnerBurdened": 25.0
-  }}]
-}
+  }]
+
