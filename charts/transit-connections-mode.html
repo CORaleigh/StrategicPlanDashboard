@@ -1,61 +1,3 @@
-<html>
-<head>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.1/vega.min.js"></script>
-  <script type="text/javascript" src="https://npmcdn.com/arcgis-cedar/dist/cedar.js"></script>
-</head>
-<body>
-
-<div class="row">
-<h3 align="left"; style="font-family:Helvetica">GoRaleigh Regional Connections by Mode</h3>
-  <div style="width: 450px; height: 400px" id="chart"></div>
-
-</div>
-
-<script>
-  var chart = new Cedar({"type": "grouped"});
-  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-connections-mode.json', function(err, data){
-    if(!err){
-  var dataset = {
-    "data": data,
-    "mappings":{
-      "x": {"field":["attributes.year2015","attributes.year2016"],"label":"Year"},
-      //"y": {"field":["connections"],"label":"connections"},
-      "group":{"field":"mode","label":"mode"}
-    }
-  };
-  chart.tooltip = {
-    "title": "{mode}",
-    "content": "{year2015} Connections in 2015 | {year2016} Connections in 2016"
-  };
-  chart.override = {
-    "marks": [
-      {"properties": 
-        {
-          "hover": {"fill": {"value": "#17581D"}},
-          "update": {"fill": {"value": "#718A73"}}
-        }
-      }
-    ]
-  };
-  //test
-  //assign to the chart
-  chart.dataset = dataset;
-  //show the chart
-  chart.show({
-    elementId: "#chart"
-  });
-    }else{
-      console.error('Error loading data from file');
-    }
-  });
-</script>
-</body>
-</html>
-
-
-
-
 <!DOCTYPE html>
 <style>
 .axis path,
@@ -125,20 +67,18 @@
     text-align: center;
 }
 h3{ 
-  margin-left:80px;
+  margin-left:60px;
 }
 
 </style>
 
 <h3>GoRaleigh Regional Connections by Mode</h3>
 
-
 <svg width="450" height="350"></svg>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-
 
 <script>
 // $.ajax({
