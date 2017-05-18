@@ -1,12 +1,11 @@
-{"features": [
-  {"attributes": {
-  	"year": "FY15",
-    "PersonCrimes": 1428,
-    "PropertyCrimes": 3600
-  }},
-  {"attributes": {
-    "year": "FY16",
-    "PersonCrimes": 1567,
-    "PropertyCrimes": 4614
-  }}]
-}
+[
+  {
+  	"Year": "FY15",
+    "Person Crimes": 1428,
+    "Property Crimes": 3600
+  },
+  {
+    "Year": "FY16",
+    "Person Crimes": 1567,
+    "Property Crimes": 4614
+  }]
