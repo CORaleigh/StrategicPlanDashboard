@@ -1,22 +1,22 @@
 [
   {
   	"year": "2012",
-    "RentBurdened": 48.7,
-    "OwnerBurdened": 26.4
+    "Rent Burdened": 48.7,
+    "Owner Burdened": 26.4
   },
   {
     "year": "2013",
-    "RentBurdened": 46.9,
-    "OwnerBurdened": 26.0
+    "Rent Burdened": 46.9,
+    "Owner Burdened": 26.0
     },
   {
     "year": "2014",
-    "RentBurdened": 53.1,
-    "OwnerBurdened": 23.8
+    "Rent Burdened": 53.1,
+    "Owner Burdened": 23.8
     },
   {
     "year": "2015",
-    "RentBurdened": 48.7,
-    "OwnerBurdened": 25.0
+    "Rent Burdened": 48.7,
+    "Owner Burdened": 25.0
   }]
 
