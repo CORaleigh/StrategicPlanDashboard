@@ -154,7 +154,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/community-surv
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +"% responded 'excellent or 'good' "+ d.key+"");
+        divTooltip.html(d.value +"% responded 'excellent or 'good' "+"("+ d.key+")");
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
