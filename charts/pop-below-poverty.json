@@ -1,22 +1,22 @@
-{"features": [
-  {"attributes": {
+[
+  {
     "year": "2012",
     "Raleigh": 16.4,
     "NC": 18.0
-  }},
-  {"attributes": {
+  },
+  {
     "year": "2013",
     "Raleigh": 15.1,
     "NC": 17.9
-  }},
-  {"attributes": {
+  },
+  {
     "year": "2014",
     "Raleigh": 16.6,
     "NC": 17.2
-    }},
-  {"attributes": {
+    },
+  {
     "year": "2015",
     "Raleigh": 16.4,
     "NC": 15.6
-  }}]
-}
+  }]
+
