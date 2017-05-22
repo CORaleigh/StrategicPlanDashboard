@@ -19,13 +19,13 @@
   var dataset = {
     "data": data,
     "mappings":{
-      "x": {"field":"percent","label":"Percent of responses 'good' or 'very good'"},
+      "x": {"field":"percent","label":"% of responses 'excellent' or 'good'"},
       "y": {"field":"metric","label":""}
     }
   };
   chart.tooltip = {
     "title": "{metric}",
-    "content": "{percent} percent of responses 'good' or 'very good'"
+    "content": "{percent} % of responses 'excellent' or 'very good'"
   };
   chart.override = {
     "marks": [
