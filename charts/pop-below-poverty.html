@@ -190,7 +190,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/pop-below-pove
       .attr("font-size", 10)
       .attr("text-anchor", "start")
     .selectAll("g")
-    .data(keys.slice().reverse())
+    .data(keys.slice())
     .enter().append("g")
       .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
   legend.append("rect")
