@@ -1,26 +1,26 @@
-{"features": [
-  {"attributes": {
+[
+  {
     "year": "2013",
     "Greensboro": 7.6,
     "Charlotte": 6.6,
     "Raleigh": 5.6
-  }},
-  {"attributes": {
+  },
+  {
     "year": "2014",
     "Greensboro": 6.1,
     "Charlotte": 5.2,
     "Raleigh": 4.6
-    }},  
-  {"attributes": {
+    },  
+  {
     "year": "2015",
     "Greensboro": 5.7,
     "Charlotte": 4.9,
     "Raleigh": 4.6
-    }},
-  {"attributes": {
+    },
+  {
     "year": "2016",
     "Greensboro": 5.0,
     "Charlotte": 4.4,
     "Raleigh": 4.1
-  }}]
-}
+  }]
+
