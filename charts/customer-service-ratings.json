@@ -1,12 +1,12 @@
-{"features": [
-  {"attributes": {
+[
+  {
     "question": "Customer Service",
     "National": 36,
     "Raleigh": 69
-  }},
-  {"attributes": {
+  },
+  {
     "question": "Communication with Public",
     "National": 38,
     "Raleigh": 58
-  }}]
-}
+  }
+]
