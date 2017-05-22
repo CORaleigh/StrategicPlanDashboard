@@ -127,7 +127,7 @@
     text-align: center;
 }
 h3{ 
-  margin-left:160px;
+  margin-left:80px;
 }
 
 </style>
@@ -135,7 +135,7 @@ h3{
 <h3>Community Survey Ratings</h3>
 
 
-<svg width="600" height="600"></svg>
+<svg width="450" height="450"></svg>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -155,7 +155,7 @@ h3{
 //
 // var data = resp;
 var svg = d3.select("svg"),
-    margin = {top:20, right: 140, bottom: 220, left: 40},
+    margin = {top:20, right: 140, bottom: 150, left: 40},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -181,7 +181,7 @@ var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 //   d.frequency = +"d.2015" | +"d.2016";
 //   return d;
 // }
-d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/community-survey.csv", function(d, i, columns) {
+d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/customer-service-ratings.csv", function(d, i, columns) {
   for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = +d[columns[i]];
   return d;
 }, function(error, data) {
