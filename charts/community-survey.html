@@ -129,12 +129,12 @@
     text-align: center;
 }
 h3{ 
-  margin-left:40px;
+  margin-left:80px;
 }
 
 </style>
 
-<h3>Percent of Population Below Poverty Level</h3>
+<h3>Community Survey Ratings</h3>
 
 
 <svg width="450" height="350"></svg>
@@ -202,6 +202,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/community-surv
     .data(function(d) { return keys.map(function(key) { return {key: key, value: d[key]}; }); })
     .enter().append("rect")
       .attr("x", function(d) { return x1(d.key); })
+      //.attr("x",0 - (height/2))
       .attr("y", function(d) { return y(d.value); })
       .attr("width", x1.bandwidth())
       .attr("height", function(d) { return height - y(d.value); })
@@ -230,7 +231,9 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/community-surv
   g.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x0));
+      .call(d3.axisBottom(x0))
+      //.attr("transform", "rotate(45)")
+
   g.append("g")
       .attr("class", "axis")
       .call(d3.axisLeft(y).ticks(null, "s"))
