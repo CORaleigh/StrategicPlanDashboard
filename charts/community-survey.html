@@ -67,7 +67,7 @@
     text-align: center;
 }
 h3{ 
-  margin-left:105px;
+  margin-left:170px;
 }
 
 </style>
@@ -75,7 +75,7 @@ h3{
 <h3>Community Survey Ratings</h3>
 
 
-<svg width="500" height="500"></svg>
+<svg width="600" height="600"></svg>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -154,7 +154,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/community-surv
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +"% below poverty level in "+ d.key);
+        divTooltip.html(d.value +"% responded 'excellent or 'good' "+ d.key+"");
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
