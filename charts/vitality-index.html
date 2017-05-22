@@ -19,13 +19,13 @@
   var dataset = {
     "data": data,
     "mappings":{
-      "x": {"field":"percent","label":"x"},
+      "x": {"field":"percent","label":"CVI"},
       "y": {"field":"metric","label":""}
     }
   };
   chart.tooltip = {
     "title": "{metric}",
-    "content": "{percent} x"
+    "content": "{percent} CVI"
   };
   chart.override = {
     "marks": [
