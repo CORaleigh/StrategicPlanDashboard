@@ -67,7 +67,7 @@
     text-align: center;
 }
 h3{ 
-  margin-left:80px;
+  margin-left:70px;
 }
 
 </style>
@@ -153,7 +153,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/unemployment-r
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +"% below poverty level in "+ d.key);
+        divTooltip.html(d.value +"% unemployment in "+ d.key);
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
