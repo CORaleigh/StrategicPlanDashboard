@@ -97,7 +97,7 @@ h4{
 //
 // var data = resp;
 var svg = d3.select("svg"),
-    margin = {top:20, right: 140, bottom: 30, left: 40},
+    margin = {top:20, right: 140, bottom: 40, left:50},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -189,11 +189,18 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/pop-below-pove
 // });
 svg.append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 0 - margin.left)
+      .attr("y", 0)
+      //.attr("padding-right","6px")
       .attr("x",0 - (height / 2))
       .attr("dy", "1em")
       .style("text-anchor", "middle")
-      .text("Percent"); 
+      .text("Percent")
+ svg.append("text")             
+      .attr("transform",
+            "translate(" + (width - 80) + " ," + (height + 60) + ")")
+      //.style("color","#cccccc")
+      .style("text-anchor", "middle")
+      .text("Date");
   var legend = g.append("g")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
