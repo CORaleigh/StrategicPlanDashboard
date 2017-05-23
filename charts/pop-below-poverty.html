@@ -187,6 +187,13 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/pop-below-pove
       //.attr("padding-bottom", "20px")
       //.text("Crimes per 100,000 People");
 // });
+svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Percent"); 
   var legend = g.append("g")
       .attr("font-family", "sans-serif")
       .attr("font-size", 10)
