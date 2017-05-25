@@ -74,7 +74,7 @@ h5{
 
 </style>
 
-<h5>Daily Air Quality Ratings</h5>
+<h5>Average Daily Water Use</h5>
 
 
 <svg width="450" height="350"></svg>
@@ -123,7 +123,7 @@ var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 //   d.frequency = +"d.2015" | +"d.2016";
 //   return d;
 // }
-d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/air-quality.csv", function(d, i, columns) {
+d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/water-use.csv", function(d, i, columns) {
   for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = +d[columns[i]];
   return d;
 }, function(error, data) {
@@ -155,7 +155,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/air-quality.cs
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +"%"+ d.key);
+        divTooltip.html(d.value +"% unemployment in "+ d.key);
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
@@ -196,7 +196,7 @@ svg.append("text")
       .style("text-anchor", "middle")
       .style("fill","#4c4c4c")
       .style("font-family", "Helvetica, sans-serif")
-      .text("Percent")
+      .text("Gallons per Capita")
  svg.append("text")             
       .attr("transform","translate(" + (width - 95) + " ," + (height + 55) + ")")
       .style("font-size", 10)
