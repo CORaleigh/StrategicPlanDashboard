@@ -110,7 +110,7 @@ var x1 = d3.scaleBand()
 var y = d3.scaleLinear()
     .rangeRound([height, 0]);
 var z = d3.scaleOrdinal()
-    .range(["#A0B589", "#718A73", "#17581D", "#1D3D00"]);
+    .range(["#A0B589", "#718A73", "#17581D"]);
 var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 // var tip = d3.tip()
 //   .attr('class', 'd3-tip')
@@ -214,12 +214,12 @@ svg.append("text")
     .enter().append("g")
       .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
   legend.append("rect")
-      .attr("x", width -15)
+      .attr("x", width + 15)
       .attr("width", 19)
       .attr("height", 19)
       .attr("fill", z);
   legend.append("text")
-      .attr("x", width +10)
+      .attr("x", width + 40)
       .attr("y", 9.5)
       .attr("dy", "0.32em")
       .text(function(d) { return d; });
