@@ -110,7 +110,7 @@ var x1 = d3.scaleBand()
 var y = d3.scaleLinear()
     .rangeRound([height, 0]);
 var z = d3.scaleOrdinal()
-    .range(["#A0B589", "#718A73", "#17581D"]);
+    .range(["#718A73", "#17581D"]);
 var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 // var tip = d3.tip()
 //   .attr('class', 'd3-tip')
@@ -155,7 +155,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/water-use.csv"
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +"% unemployment in "+ d.key);
+        divTooltip.html(d.value +" gallons per capita for "+ d.key +" Customers");
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
