@@ -155,7 +155,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/ratings-cleanl
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +" gallons per capita for "+ d.key +" Customers");
+        divTooltip.html(d.value +"  "+ d.key +" of responses 'good' or 'very good'");
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
