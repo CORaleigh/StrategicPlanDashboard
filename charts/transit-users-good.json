@@ -1,13 +1,13 @@
-{"features": [
-  {"attributes": {
+{"": [
+  {"": {
   	"metric": "Weekend Service",
   	"percent": 32
   }},
- {"attributes": {
+ {"": {
   	"metric": "Frequency",
   	"percent": 63
   }},
- {"attributes": {
+ {"": {
   	"metric": "Ease of Bus Connections",
   	"percent": 64
   }}]
