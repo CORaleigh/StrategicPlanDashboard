@@ -130,17 +130,17 @@
     text-align: center;
 }
 h5{ 
-  margin-left:90px;
+  margin-left:175px;
   font-family:Helvetica, sans-serif;
   color:#4c4c4c;
 }
 
 </style>
 
-<h5>Crimes per 100,000 People</h5>
+<h5>Community Survey Ratings</h5>
 
 
-<svg width="450" height="350"></svg>
+<svg width="600" height="600"></svg>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -157,10 +157,10 @@ h5{
 // console.log(resp);
 //
 // // Make a JSON object out of the data.d string receieved.
-//
+// test
 // var data = resp;
 var svg = d3.select("svg"),
-    margin = {top:20, right: 140, bottom: 40, left:55},
+    margin = {top:20, right: 140, bottom: 220, left: 45},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -173,7 +173,7 @@ var x1 = d3.scaleBand()
 var y = d3.scaleLinear()
     .rangeRound([height, 0]);
 var z = d3.scaleOrdinal()
-    .range(["#718A73", "#17581D"]);
+    .range(["#718A73", "#17581D", "#17581D"])
 var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 // var tip = d3.tip()
 //   .attr('class', 'd3-tip')
@@ -186,25 +186,26 @@ var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 //   d.frequency = +"d.2015" | +"d.2016";
 //   return d;
 // }
-d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/crimes-per.csv", function(d, i, columns) {
+d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-good.csv", function(d, i, columns) {
   for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = +d[columns[i]];
   return d;
 }, function(error, data) {
   if (error) throw error;
   var keys = data.columns.slice(1);
   var color = d3.scaleOrdinal(d3.category20c);
-  x0.domain(data.map(function(d) { return d.Year; }));
+  x0.domain(data.map(function(d) { return d.metric; }));
   x1.domain(keys).rangeRound([0, x0.bandwidth()]);
   y.domain([0, d3.max(data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
   g.append("g")
     .selectAll("g")
     .data(data)
     .enter().append("g")
-      .attr("transform", function(d) { return "translate(" + x0(d.Year) + ",0)"; })
+      .attr("transform", function(d) { return "translate(" + x0(d.metric) + ",0)"; })
     .selectAll("rect")
     .data(function(d) { return keys.map(function(key) { return {key: key, value: d[key]}; }); })
     .enter().append("rect")
       .attr("x", function(d) { return x1(d.key); })
+      //.attr("x",0 - (height/2))
       .attr("y", function(d) { return y(d.value); })
       .attr("width", x1.bandwidth())
       .attr("height", function(d) { return height - y(d.value); })
@@ -218,7 +219,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/crimes-per.csv
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +" "+ d.key);
+        divTooltip.html(d.value +"% responded 'excellent or 'good' "+"("+ d.key+")");
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
@@ -233,7 +234,13 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/crimes-per.csv
   g.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x0));
+      .call(d3.axisBottom(x0).ticks(10))
+      .selectAll("text")
+        .style("text-anchor", "end")  
+        .attr("dx","-.8em")
+        .attr("dy",".15em")
+        .attr("transform","rotate(-60)");
+
   g.append("g")
       .attr("class", "axis")
       .call(d3.axisLeft(y).ticks(null, "s"))
@@ -253,27 +260,27 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/crimes-per.csv
 svg.append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 0)
-      .attr("x",0 - (height/1.75))
+      .attr("x",0 - (height/2))
       .attr("dy", "1em")
       .style("font-size", 10)
       .style("text-anchor", "middle")
       .style("fill","#4c4c4c")
       .style("font-family", "Helvetica, sans-serif")
-      .text("Crimes")
+      .text("Percent")
  svg.append("text")             
-      .attr("transform","translate(" + (width - 70) + " ," + (height + 55) + ")")
+      .attr("transform","translate(" + (width - 95) + " ," + (height + 55) + ")")
       .style("font-size", 10)
       .style("fill","#4c4c4c")
       .style("text-anchor", "middle")
       .style("font-family", "Helvetica, sans-serif")
-      .text("Fiscal Year")
+      //.text("Year")
   var legend = g.append("g")
-      .attr("font-family", "Helvetica, sans-serif")
+      .attr("font-family", "sans-serif")
       .attr("text-anchor", "start")
       .style("font-size", 10)
       .style("font-family", "Helvetica, sans-serif")
     .selectAll("g")
-    .data(keys.slice().reverse())
+    .data(keys.slice())
     .enter().append("g")
       .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
   legend.append("rect")
