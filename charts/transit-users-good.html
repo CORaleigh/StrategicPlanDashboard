@@ -1,66 +1,3 @@
-<style>
-  h5{ 
-  margin-left:180px;
-  font-family:Helvetica, sans-serif;
-  color:#4c4c4c;
-}
-</style>
-<h5>Transit Users Rating of GoRaleigh</h5>
-<html>
-<head>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vega/2.6.1/vega.min.js"></script>
-  <script type="text/javascript" src="https://npmcdn.com/arcgis-cedar/dist/cedar.js"></script>
-</head>
-<body>
-
-<div class="row">
-
-<div style="width: 450px; height: 300px" id="chart"></div>
-
-</div>
-
-<script>
-  var chart = new Cedar({"type": "bar-horizontal"});
-  var data = Cedar.getJson('https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-good.json', function(err, data){
-    if(!err){
-  var dataset = {
-    "data": data,
-    "mappings":{
-      "x": {"field":"percent","label":"Percent of responses 'good' or 'very good'"},
-      "y": {"field":"metric","label":""}
-    }
-  };
-  chart.tooltip = {
-    "title": "{metric}",
-    "content": "{percent} percent of responses 'good' or 'very good'"
-  };
-  chart.override = {
-    "marks": [
-      {"properties": 
-        {
-          "hover": {"fill": {"value": "#17581D"}},
-          "update": {"fill": {"value": "#718A73"}}
-        }
-      }
-    ]
-  };
-  //assign to the chart
-  chart.dataset = dataset;
-  //show the chart
-  chart.show({
-    elementId: "#chart"
-  });
-    }else{
-      console.error('Error loading data from file');
-    }
-  });
-</script>
-</body>
-</html>
-
-
-
 <!DOCTYPE html>
 <style>
 .axis path,
@@ -130,7 +67,7 @@
     text-align: center;
 }
 h5{ 
-  margin-left:175px;
+  margin-left:140px;
   font-family:Helvetica, sans-serif;
   color:#4c4c4c;
 }
@@ -173,7 +110,7 @@ var x1 = d3.scaleBand()
 var y = d3.scaleLinear()
     .rangeRound([height, 0]);
 var z = d3.scaleOrdinal()
-    .range(["#A0B589", "#718A73", "#17581D"]);
+    .range(["#718A73", "#17581D"]);
 var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 // var tip = d3.tip()
 //   .attr('class', 'd3-tip')
@@ -219,7 +156,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/transit-users-
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +"% responded 'excellent or 'good' "+"("+ d.key+")");
+        divTooltip.html(d.value +"% responded 'good' or 'very good' ");
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
@@ -274,7 +211,7 @@ svg.append("text")
       .style("text-anchor", "middle")
       .style("font-family", "Helvetica, sans-serif")
       //.text("Year")
-  var legend = g.append("g")
+  //var legend = g.append("g")
       .attr("font-family", "sans-serif")
       .attr("text-anchor", "start")
       .style("font-size", 10)
