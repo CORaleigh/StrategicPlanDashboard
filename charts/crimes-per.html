@@ -97,7 +97,7 @@ h5{
 //
 // var data = resp;
 var svg = d3.select("svg"),
-    margin = {top:20, right: 140, bottom: 40, left:55},
+    margin = {top:20, right: 170, bottom: 40, left:55},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -198,7 +198,7 @@ svg.append("text")
       .style("font-family", "Helvetica, sans-serif")
       .text("Crimes")
  svg.append("text")             
-      .attr("transform","translate(" + (width - 70) + " ," + (height + 55) + ")")
+      .attr("transform","translate(" + (width - 60) + " ," + (height + 55) + ")")
       .style("font-size", 10)
       .style("fill","#4c4c4c")
       .style("text-anchor", "middle")
