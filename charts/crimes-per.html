@@ -66,13 +66,15 @@
     padding: 5px;
     text-align: center;
 }
-h3{ 
-  margin-left:80px;
+h5{ 
+  margin-left:85px;
+  font-family:Helvetica, sans-serif;
+  color:#4c4c4c;
 }
 
 </style>
 
-<h3>Crimes per 100,000 People</h3>
+<h5>Crimes per 100,000 People</h5>
 
 
 <svg width="450" height="350"></svg>
@@ -95,7 +97,7 @@ h3{
 //
 // var data = resp;
 var svg = d3.select("svg"),
-    margin = {top:20, right: 140, bottom: 30, left: 40},
+    margin = {top:20, right: 140, bottom: 40, left:55},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -108,7 +110,7 @@ var x1 = d3.scaleBand()
 var y = d3.scaleLinear()
     .rangeRound([height, 0]);
 var z = d3.scaleOrdinal()
-    .range(["#17581D", "#718A73"]);
+    .range(["#718A73", "#17581D"]);
 var divTooltip = d3.select("body").append("div").attr("class", "toolTip");
 // var tip = d3.tip()
 //   .attr('class', 'd3-tip')
@@ -185,10 +187,28 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/crimes-per.csv
       //.attr("padding-bottom", "20px")
       //.text("Crimes per 100,000 People");
 // });
+svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0)
+      .attr("x",0 - (height/1.75))
+      .attr("dy", "1em")
+      .style("font-size", 10)
+      .style("text-anchor", "middle")
+      .style("fill","#4c4c4c")
+      .style("font-family", "Helvetica, sans-serif")
+      .text("Crimes")
+ svg.append("text")             
+      .attr("transform","translate(" + (width - 70) + " ," + (height + 55) + ")")
+      .style("font-size", 10)
+      .style("fill","#4c4c4c")
+      .style("text-anchor", "middle")
+      .style("font-family", "Helvetica, sans-serif")
+      .text("Fiscal Year")
   var legend = g.append("g")
-      .attr("font-family", "sans-serif")
-      .attr("font-size", 10)
+      .attr("font-family", "Helvetica, sans-serif")
       .attr("text-anchor", "start")
+      .style("font-size", 10)
+      .style("font-family", "Helvetica, sans-serif")
     .selectAll("g")
     .data(keys.slice().reverse())
     .enter().append("g")
