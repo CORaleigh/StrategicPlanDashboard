@@ -68,7 +68,7 @@
     text-align: center;
 }
 h5{ 
-  margin-left:90px;
+  margin-left:100px;
   font-family:Helvetica, sans-serif;
   color:#4c4c4c;
 }
@@ -98,7 +98,7 @@ h5{
 //
 // var data = resp;
 var svg = d3.select("svg"),
-    margin = {top:20, right: 140, bottom: 40, left:55},
+    margin = {top:20, right: 100, bottom: 80, left:45},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -171,7 +171,13 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/life-expectanc
   g.append("g")
       .attr("class", "axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x0));
+      .call(d3.axisBottom(x0))
+      .selectAll("text")
+        .style("text-anchor", "end")  
+        .attr("dx","-.8em")
+        .attr("dy",".15em")
+        .attr("transform","rotate(-60)");
+
   g.append("g")
       .attr("class", "axis")
       .call(d3.axisLeft(y).ticks(null, "s"))
@@ -199,13 +205,13 @@ svg.append("text")
       .style("font-family", "Helvetica, sans-serif")
       .text("Life Expectancy (years)")
  svg.append("text")             
-      .attr("transform","translate(" + (width - 70) + " ," + (height + 55) + ")")
+      .attr("transform","translate(" + (width - 105) + " ," + (height + 80) + ")")
       .style("font-size", 10)
       .style("fill","#4c4c4c")
       .style("text-anchor", "middle")
       .style("font-family", "Helvetica, sans-serif")
       .text("ZIP Code")
-  var legend = g.append("g")
+  //var legend = g.append("g")
       .attr("font-family", "Helvetica, sans-serif")
       .attr("text-anchor", "start")
       .style("font-size", 10)
