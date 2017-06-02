@@ -1,25 +1,25 @@
-{"features": [
-  {"attributes": {
+{"": [
+  {"": {
   	"year": "FY14",
   	"units": 148
   }},
-  {"attributes": {
+  {"": {
   	"year": "FY15",
   	"units": 190
   }},
-  {"attributes": {
+  {"": {
   	"year": "FY16",
   	"units": 163
   }},
-  {"attributes": {
+  {"": {
   	"year": "FY17*",
   	"units": 368
   }},
-  {"attributes": {
+  {"": {
   	"year": "FY18*",
   	"units": 464
   }},
-  {"attributes": {
+  {"": {
   	"year": "FY19*",
   	"units": 552
   }}]
