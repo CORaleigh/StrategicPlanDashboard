@@ -1,57 +1,57 @@
-{"features": [
-  {"attributes": {
+{"": [
+  {"": {
   	"zip": "27601",
   	"years": 75
   }},
-  {"attributes": {
+  {"": {
   	"zip": "27610",
   	"years": 76
   }},
-  {"attributes": {
+  {"": {
   	"zip": "27605",
   	"years": 78
   }},
-  {"attributes": {
+  {"": {
   	"zip": "27603",
   	"years": 80
   }},
-  {"attributes": {
+  {"": {
   	"zip": "27604",
   	"years": 80
   }},
-  {"attributes": {
+  {"": {
   	"zip": "27606",
   	"years": 81
   }},
-  {"attributes": {
+  {"": {
     "zip": "27608",
     "years": 81
   }},
-  {"attributes": {
+  {"": {
     "zip": "27616",
     "years": 81
   }},
-  {"attributes": {
+  {"": {
     "zip": "27609",
     "years": 83
   }},
-  {"attributes": {
+  {"": {
     "zip": "27613",
     "years": 83
   }},
-  {"attributes": {
+  {"": {
     "zip": "27612",
     "years": 84
   }},
-    {"attributes": {
+    {"": {
     "zip": "27615",
     "years": 84
   }},
-    {"attributes": {
+    {"": {
     "zip": "27614",
     "years": 85
   }},
-    {"attributes": {
+    {"": {
     "zip": "27617",
     "years": 88
   }}]
