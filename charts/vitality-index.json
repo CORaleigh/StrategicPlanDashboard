@@ -1,18 +1,22 @@
 {"features": [
+    {"attributes": {
+  	"metric": "2016",
+  	"percent": 1.28
+  }},
+    {"attributes": {
+  	"metric": "2015",
+  	"percent": 1.28
+  }},
   {"attributes": {
   	"metric": "2014",
-  	"percent": 1.28
+  	"percent": 1.34
   }},
  {"attributes": {
   	"metric": "2013",
-  	"percent": 1.27
+  	"percent": 1.36
   }},
  {"attributes": {
   	"metric": "2012",
-  	"percent": 1.34
-  }},
-   {"attributes": {
-    "metric": "2011",
-    "percent": 1.37
+  	"percent": 1.39
   }}]
 }
