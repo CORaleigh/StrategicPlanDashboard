@@ -14,5 +14,9 @@
   {"attributes": {
   	"year": "FY16",
   	"attendance": 346441
+  }},
+  {"attributes": {
+  	"year": "FY17",
+  	"attendance": 408627
   }}]
 }
