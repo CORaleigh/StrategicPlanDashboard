@@ -155,7 +155,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/waste-recyclin
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +" pounds per household "+ d.key +" Customers");
+        divTooltip.html(d.value +" Pounds of "+ d.key );
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
