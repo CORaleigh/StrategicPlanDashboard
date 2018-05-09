@@ -155,7 +155,7 @@ d3.csv("https://coraleigh.github.io/StrategicPlanDashboard/charts/waste-recyclin
         l = elements.length
         l = l-1
         elementData = elements[l].__data__
-        divTooltip.html(d.value +" gallons per capita for "+ d.key +" Customers");
+        divTooltip.html(d.value +" pounds per household "+ d.key +" Customers");
     })
     .on("mouseout", function(d){
       divTooltip.style("display", "none");
@@ -196,7 +196,7 @@ svg.append("text")
       .style("text-anchor", "middle")
       .style("fill","#4c4c4c")
       .style("font-family", "Helvetica, sans-serif")
-      .text("Gallons per Capita")
+      .text("Pounds per Household")
  svg.append("text")             
       .attr("transform","translate(" + (width - 70) + " ," + (height + 65) + ")")
       .style("font-size", 10)
