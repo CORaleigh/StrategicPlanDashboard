@@ -9,10 +9,18 @@
   }},
   {"attributes": {
   	"year": "FY17",
-  	"events": 442
+  	"events": 630
   }},
   {"attributes": {
   	"year": "FY18",
-  	"events": 453
+  	"events": 627
+  }},
+  {"attributes": {
+    "year": "FY19",
+    "events": 648
+  }},
+  {"attributes": {
+    "year": "FY20",
+    "events": 426
   }}]
 }
