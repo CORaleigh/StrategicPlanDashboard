@@ -1,42 +1,43 @@
 [
-{
-"year": "2014",
-"Good": 59,
-"Moderate": 41,
-"Unhealthy Sensitive Groups": 0,
-"Unhealthy/Very Unhealthy": 0
-},
-{
-"year": "2015",
-"Good": 62,
-"Moderate": 37,
-"Unhealthy Sensitive Groups": 1,
-"Unhealthy/Very Unhealthy": 0
-},
-{
-"year": "2016",
-"Good": 63,
-"Moderate": 36,
-"Unhealthy Sensitive Groups": 1,
-"Unhealthy/Very Unhealthy": 0
-{
-"year": "2017",
-"Good": 66,
-"Moderate": 34,
-"Unhealthy Sensitive Groups": 0,
-"Unhealthy/Very Unhealthy": 0
-},
-{
-"year": "2018",
-"Good": 66,
-"Moderate": 34,
-"Unhealthy Sensitive Groups": 0,
-"Unhealthy/Very Unhealthy": 0
-},
-{
-"year": "2019",
-"Good": 64,
-"Moderate": 36,
-"Unhealthy Sensitive Groups": 0,
-"Unhealthy/Very Unhealthy": 0
+  {
+    "year": "2014",
+   "Good": 59,
+   "Moderate": 41,
+   "Unhealthy Sensitive Groups": 0,
+   "Unhealthy/Very Unhealthy": 0
+  },
+  {
+    "year": "2015",
+    "Good": 62,
+    "Moderate": 37,
+    "Unhealthy Sensitive Groups": 1,
+    "Unhealthy/Very Unhealthy": 0
+  },
+  {
+    "year": "2016",
+    "Good": 63,
+    "Moderate": 36,
+    "Unhealthy Sensitive Groups": 1,
+    "Unhealthy/Very Unhealthy": 0
+  },
+  {
+    "year": "2017",
+    "Good": 66,
+    "Moderate": 34,
+    "Unhealthy Sensitive Groups": 0,
+    "Unhealthy/Very Unhealthy": 0
+  },
+  {
+    "year": "2018",
+    "Good": 66,
+    "Moderate": 34,
+    "Unhealthy Sensitive Groups": 0,
+    "Unhealthy/Very Unhealthy": 0
+  },
+  {
+    "year": "2019",
+    "Good": 64,
+    "Moderate": 36,
+    "Unhealthy Sensitive Groups": 0,
+    "Unhealthy/Very Unhealthy": 0
 }]
